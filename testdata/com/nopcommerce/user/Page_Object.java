@@ -37,25 +37,15 @@ public class Page_Object extends BasePage {
 		email="user" + getRandomNumber()+ "@gmail.com";
 	}
 	
-	public void TC01_Register_Empty_Data() {
-		System.out.println("Click register link at home page");
-//		waitForElementClickable(driver, "//a[@class='ico-register']");
-//		clickToElement(driver, "//a[@class='ico-register']");
+	@Test
+	public void Register01_Empty_Data() {
+		System.out.println("Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
 		
-		System.out.println("Click register link at home page");
-//		waitForElementClickable(driver, "register-button");
-//		clickToElement(driver, "register-button");
+		System.out.println("Step2: Click register link at home page");
 		registerPage.clickToRegisterButton();
 		
-		System.out.println("Showing the error message at each required textbox");
-		
-//		Assert.assertEquals(getElementText(driver, "FirstName-error"), "First name is required.");
-//		Assert.assertEquals(getElementText(driver, "LastName-error"), "Last name is required.");
-//		Assert.assertEquals(getElementText(driver, "Email-error"), "Email is required.");
-//		Assert.assertEquals(getElementText(driver, "Password-error"), "Password is required.");
-//		Assert.assertEquals(getElementText(driver, "ConfirmPassword-error"), "Password is required.");
-		
+		System.out.println("Step3: Showing the error message at each required textbox");		
 		Assert.assertEquals(registerPage.getErrorMessageAtFirstNameTextbox(), "First name is required.");
 		Assert.assertEquals(registerPage.getErrorMessageAtLastNameTextbox(), "Last name is required.");
 		Assert.assertEquals(registerPage.getErrorMessageAtEmailTextbox(), "Email is required.");
@@ -64,37 +54,42 @@ public class Page_Object extends BasePage {
 	}
 	
 	@Test
-	public void TC02_Register_Invalid_Email() {
-		System.out.println("Click register link at home page");
+	public void Register02_Invalid_Email() {
+		System.out.println("Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
 		
-		System.out.println("Input to required field");
+		System.out.println("Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 		registerPage.inputToEmailTextbox("123@123@123@123");
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
+		System.out.println("Step3: Click into register button");
 		registerPage.clickToRegisterButton();
+		System.out.println("Step4: Showing the error message at email");
 		Assert.assertEquals(registerPage.getErrorMessageAtEmailTextbox(), "Wrong email");
 	}
 
 	@Test
-	public void TC03_Register_Success() {
-		System.out.println("Click register link at home page");
+	public void Register03_Register_Success() {
+		System.out.println("Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
 		
-		System.out.println("Input to required field");
+		System.out.println("Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 		registerPage.inputToEmailTextbox(emailValue);
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
+		System.out.println("Step3: Click into register button");
 		registerPage.clickToRegisterButton();
+		System.out.println("Step4: Showing the success message");
 		Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
 	}
 	
 	@AfterClass
 	public void afterClass() {
+		driver.quit();
 	}
 	
 	public int getRandomNumber() {
