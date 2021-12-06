@@ -30,18 +30,9 @@ public class Page_Object_Login {
 		driver = new ChromeDriver();
 		driver.get("https://demo.nopcommerce.com/");
 		homePage= new HomePageObject(driver);
-		loginPage= new LoginPageObject(driver);
-		
-		//emailValue= "user"+ getRandomNumber()+"@gmail.com";
-		//passwordValue="12345678";
-//		firstName="Automation";
-//		lastName="FC";
-		
-		
+		loginPage= new LoginPageObject(driver);		
 		System.out.println("Register_03-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
-		
-		
+		homePage.clickToRegisterLink();		
 	}
 	@Test
 	public void Login_01_Empty_Data() {
@@ -79,8 +70,7 @@ public class Page_Object_Login {
 		loginPage.clickToLoginButton();
 		
 		System.out.println("Login_02-Step3: Check showing the error message");
-		Assert.assertEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
-		
+		Assert.assertEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");		
 	}
 	
 	@Test
@@ -115,8 +105,7 @@ public class Page_Object_Login {
 	}
 	
 	@Test
-	public void Login_05_Email_Exist_Incorrect_Password() {
-		
+	public void Login_05_Email_Exist_Incorrect_Password() {		
 		homePage.clickToLoginLink();
 		
 		System.out.println("Login_05-Step1: Input email exist and incorrect password");
@@ -127,8 +116,7 @@ public class Page_Object_Login {
 		loginPage.clickToLoginButton();
 		
 		System.out.println("Login_05-Step3: Check showing the error message");
-		Assert.assertEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
-		
+		Assert.assertEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");		
 	}
 	
 	@Test
@@ -144,8 +132,7 @@ public class Page_Object_Login {
 		loginPage.clickToLoginButton();
 		
 		System.out.println("Login_06-Step3: Check showing the homePage successfully");
-		Assert.assertEquals(homePage.getWelomeText(), "Welcome to our store");
-		
+		Assert.assertEquals(homePage.getWelomeText(), "Welcome to our store");		
 	}
 	
 	@AfterClass

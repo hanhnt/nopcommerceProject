@@ -1,7 +1,5 @@
 package com.nopcommerce.user;
 
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -20,7 +18,7 @@ public class Page_Object_Register extends BasePage {
 	String emailValue="user@gmail.com";
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
-	private String firstName, lastName, email, password;
+	private String firstName, lastName, password;
 
 	@BeforeClass
 	public void beforeClass() {		
@@ -34,10 +32,9 @@ public class Page_Object_Register extends BasePage {
 		firstName="Automation";
 		lastName="FC";
 		password= "123678";
-		email="user" + getRandomNumber()+ "@gmail.com";
 	}
 	
-	//@Test
+	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register_01-Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
@@ -53,7 +50,7 @@ public class Page_Object_Register extends BasePage {
 		Assert.assertEquals(registerPage.getErrorMessageAtConfirmTextbox(), "Password is required.");		
 	}
 	
-	//@Test
+	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register_02-Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
@@ -70,7 +67,7 @@ public class Page_Object_Register extends BasePage {
 		Assert.assertEquals(registerPage.getErrorMessageAtEmailTextbox(), "Wrong email");
 	}
 
-	//@Test
+	@Test
 	public void Register_03_Register_Success() {
 		System.out.println("Register_03-Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
@@ -89,7 +86,7 @@ public class Page_Object_Register extends BasePage {
 		registerPage.clickToLogoutButton();
 	}
 	
-	//@Test
+	@Test
 	public void Register_04_Exist_Email() {
 		System.out.println("Register_04-Step1: Click register link at home page");
 		homePage.clickToRegisterLink();
@@ -143,11 +140,6 @@ public class Page_Object_Register extends BasePage {
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
-	}
-	
-	public int getRandomNumber() {
-		Random rand = new Random();
-		return rand.nextInt(99999);
 	}
 
 }
