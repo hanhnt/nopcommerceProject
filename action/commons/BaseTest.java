@@ -7,6 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 	WebDriver driver;
@@ -14,11 +16,13 @@ public class BaseTest {
 	public WebDriver getBroswerDriver(String browserName) {
 		switch (browserName) {
 			case "firefox":
-				System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+				//System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				break;
 			case "chrome":
-				System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
+				//System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
+				WebDriverManager.firefoxdriver().setup();
 				driver = new ChromeDriver();
 				break;
 			case "safari":
