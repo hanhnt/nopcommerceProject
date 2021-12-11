@@ -1,131 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-05T09:40:29Z" name="Nopcommerce" finished-at="2021-12-05T09:40:56Z" duration-ms="26094">
+  <suite started-at="2021-12-10T14:11:36Z" name="Nopcommerce" finished-at="2021-12-10T14:12:32Z" duration-ms="55651">
     <groups>
     </groups>
-    <test started-at="2021-12-05T09:40:29Z" name="Run on Chrome" finished-at="2021-12-05T09:40:56Z" duration-ms="26094">
-      <class name="com.nopcommerce.user.Page_Object_Login">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:29Z" name="beforeClass" finished-at="2021-12-05T09:40:38Z" duration-ms="8637" status="PASS">
+    <test started-at="2021-12-10T14:11:36Z" name="Run on Headless Chrome" finished-at="2021-12-10T14:12:03Z" duration-ms="26507">
+      <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:36Z" name="beforeClass" finished-at="2021-12-10T14:11:51Z" duration-ms="14685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[h_chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Login_01_Empty_Data()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:38Z" name="Login_01_Empty_Data" finished-at="2021-12-05T09:40:40Z" duration-ms="1476" status="PASS">
+        <test-method signature="Login_01_Empty_Data()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:51Z" name="Login_01_Empty_Data" finished-at="2021-12-10T14:11:52Z" duration-ms="1642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_01_Empty_Data -->
-        <test-method signature="Login_02_Invalid_Email()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:40Z" name="Login_02_Invalid_Email" finished-at="2021-12-05T09:40:41Z" duration-ms="1884" status="PASS">
+        <test-method signature="Login_02_Invalid_Email()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:52Z" name="Login_02_Invalid_Email" finished-at="2021-12-10T14:11:54Z" duration-ms="1448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_02_Invalid_Email -->
-        <test-method signature="Login_03_Email_Not_Exist()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:41Z" name="Login_03_Email_Not_Exist" finished-at="2021-12-05T09:40:44Z" duration-ms="2172" status="PASS">
+        <test-method signature="Login_03_Email_Not_Exist()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:54Z" name="Login_03_Email_Not_Exist" finished-at="2021-12-10T14:11:56Z" duration-ms="2189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_03_Email_Not_Exist -->
-        <test-method signature="Login_04_Email_Exist_Null_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:44Z" name="Login_04_Email_Exist_Null_Password" finished-at="2021-12-05T09:40:52Z" duration-ms="8412" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login was unsuccessful. Please correct the errors and try again.
-No customer account found] but found [Login was unsuccessful. Please correct the errors and try again.
-The credentials provided are incorrect]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login was unsuccessful. Please correct the errors and try again.
-No customer account found] but found [Login was unsuccessful. Please correct the errors and try again.
-The credentials provided are incorrect]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.nopcommerce.user.Page_Object_Login.Login_04_Email_Exist_Null_Password(Page_Object_Login.java:112)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="Login_04_Email_Exist_Null_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:56Z" name="Login_04_Email_Exist_Null_Password" finished-at="2021-12-10T14:11:58Z" duration-ms="1882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_04_Email_Exist_Null_Password -->
-        <test-method signature="Login_05_Email_Exist_Incorrect_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:52Z" name="Login_05_Email_Exist_Incorrect_Password" finished-at="2021-12-05T09:40:54Z" duration-ms="1567" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login was unsuccessful. Please correct the errors and try again.
-No customer account found] but found [Login was unsuccessful. Please correct the errors and try again.
-The credentials provided are incorrect]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login was unsuccessful. Please correct the errors and try again.
-No customer account found] but found [Login was unsuccessful. Please correct the errors and try again.
-The credentials provided are incorrect]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.nopcommerce.user.Page_Object_Login.Login_05_Email_Exist_Incorrect_Password(Page_Object_Login.java:129)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="Login_05_Email_Exist_Incorrect_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:11:58Z" name="Login_05_Email_Exist_Incorrect_Password" finished-at="2021-12-10T14:12:00Z" duration-ms="1874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_05_Email_Exist_Incorrect_Password -->
-        <test-method signature="Login_06_Correct_Email_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login@179ece50]" started-at="2021-12-05T09:40:54Z" name="Login_06_Correct_Email_Password" finished-at="2021-12-05T09:40:56Z" duration-ms="1902" status="PASS">
+        <test-method signature="Login_06_Correct_Email_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:12:00Z" name="Login_06_Correct_Email_Password" finished-at="2021-12-10T14:12:01Z" duration-ms="1478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_06_Correct_Email_Password -->
-      </class> <!-- com.nopcommerce.user.Page_Object_Login -->
-    </test> <!-- Run on Chrome -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@1a677343]" started-at="2021-12-10T14:12:01Z" name="afterClass" finished-at="2021-12-10T14:12:03Z" duration-ms="1263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.user.Page_Object_Login_Multiple_Browser -->
+    </test> <!-- Run on Headless Chrome -->
+    <test started-at="2021-12-10T14:12:08Z" name="Run on Headless Firefox" finished-at="2021-12-10T14:12:32Z" duration-ms="24037">
+      <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:08Z" name="beforeClass" finished-at="2021-12-10T14:12:20Z" duration-ms="12087" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[h_firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Login_01_Empty_Data()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:20Z" name="Login_01_Empty_Data" finished-at="2021-12-10T14:12:21Z" duration-ms="1682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_01_Empty_Data -->
+        <test-method signature="Login_02_Invalid_Email()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:21Z" name="Login_02_Invalid_Email" finished-at="2021-12-10T14:12:23Z" duration-ms="1729" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_02_Invalid_Email -->
+        <test-method signature="Login_03_Email_Not_Exist()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:23Z" name="Login_03_Email_Not_Exist" finished-at="2021-12-10T14:12:25Z" duration-ms="1310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_03_Email_Not_Exist -->
+        <test-method signature="Login_04_Email_Exist_Null_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:25Z" name="Login_04_Email_Exist_Null_Password" finished-at="2021-12-10T14:12:26Z" duration-ms="1803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_04_Email_Exist_Null_Password -->
+        <test-method signature="Login_05_Email_Exist_Incorrect_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:26Z" name="Login_05_Email_Exist_Incorrect_Password" finished-at="2021-12-10T14:12:28Z" duration-ms="1253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_05_Email_Exist_Incorrect_Password -->
+        <test-method signature="Login_06_Correct_Email_Password()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:28Z" name="Login_06_Correct_Email_Password" finished-at="2021-12-10T14:12:30Z" duration-ms="2616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_06_Correct_Email_Password -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Page_Object_Login_Multiple_Browser@247bddad]" started-at="2021-12-10T14:12:30Z" name="afterClass" finished-at="2021-12-10T14:12:32Z" duration-ms="1547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.user.Page_Object_Login_Multiple_Browser -->
+    </test> <!-- Run on Headless Firefox -->
   </suite> <!-- Nopcommerce -->
 </testng-results>
