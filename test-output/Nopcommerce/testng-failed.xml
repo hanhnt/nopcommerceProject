@@ -4,31 +4,18 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser">
+      <class name="com.nopcommerce.user.Page_Generator_Manager_Login">
         <methods>
-          <include name="Login_03_Email_Not_Exist"/>
-          <include name="afterClass"/>
-          <include name="Login_05_Email_Exist_Incorrect_Password"/>
-          <include name="Login_04_Email_Exist_Null_Password"/>
+          <include name="Login_01_Empty_Data"/>
           <include name="beforeClass"/>
+          <include name="Login_03_Email_Not_Exist"/>
+          <include name="Login_04_Email_Exist_Null_Password"/>
+          <include name="Login_02_Invalid_Email"/>
+          <include name="Login_05_Email_Exist_Incorrect_Password"/>
           <include name="Login_06_Correct_Email_Password"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.nopcommerce.user.Page_Object_Login_Multiple_Browser -->
+      </class> <!-- com.nopcommerce.user.Page_Generator_Manager_Login -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
-  <test thread-count="5" name="Run on Firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser">
-        <methods>
-          <include name="Login_03_Email_Not_Exist"/>
-          <include name="afterClass"/>
-          <include name="Login_05_Email_Exist_Incorrect_Password"/>
-          <include name="Login_04_Email_Exist_Null_Password"/>
-          <include name="beforeClass"/>
-          <include name="Login_06_Correct_Email_Password"/>
-        </methods>
-      </class> <!-- com.nopcommerce.user.Page_Object_Login_Multiple_Browser -->
-    </classes>
-  </test> <!-- Run on Firefox(failed) -->
 </suite> <!-- Failed suite [Nopcommerce] -->

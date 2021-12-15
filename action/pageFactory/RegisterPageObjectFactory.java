@@ -1,12 +1,12 @@
-package pageObjects;
+package pageFactory;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage{
-	public RegisterPageObject(WebDriver driver) {
+public class RegisterPageObjectFactory extends BasePage{
+	public RegisterPageObjectFactory(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -77,10 +77,9 @@ public class RegisterPageObject extends BasePage{
 		return getElementText(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
 
-	public HomePageObject clickToLogoutButton() {
+	public void clickToLogoutButton() {
 		waitForElementVisible(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
-		return new HomePageObject(driver);
 		
 	}
 

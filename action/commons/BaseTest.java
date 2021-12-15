@@ -12,6 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	WebDriver driver;
+	
 	String projectPath= System.getProperty("user.dir");
 	public WebDriver getBroswerDriver(String browserName) {
 		switch (browserName) {
@@ -22,7 +23,7 @@ public class BaseTest {
 				break;
 			case "chrome":
 				//System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
-				WebDriverManager.firefoxdriver().setup();
+				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				break;
 			case "safari":
@@ -40,9 +41,7 @@ public class BaseTest {
 				FirefoxOptions options1= new FirefoxOptions();
 				options1.addArguments("--headless");
 				options1.addArguments("window-size=1920x1080");
-				driver=new FirefoxDriver(options1);
-				
-				
+				driver=new FirefoxDriver(options1);				
 				default:
 				new RuntimeException("Please select browser");
 			break;
