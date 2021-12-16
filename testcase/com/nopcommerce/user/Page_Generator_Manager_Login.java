@@ -30,8 +30,6 @@ public class Page_Generator_Manager_Login extends BaseTest{
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-//		System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
-//		driver = new ChromeDriver();
 		driver=getBroswerDriver(browserName);
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");

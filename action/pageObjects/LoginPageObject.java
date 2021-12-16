@@ -14,9 +14,10 @@ public class LoginPageObject extends BasePage{
 	
 	LoginPageUI loginPageUI = new LoginPageUI();
 	
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementVisible(driver, loginPageUI.LOGIN_LINK);
 		clickToElement(driver, loginPageUI.LOGIN_LINK);
+		return new HomePageObject(driver);
 	}
 
 	public String getErrorMessageAtEmail() {
