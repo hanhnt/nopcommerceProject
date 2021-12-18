@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import commons.BaseFactoryPage;
 import commons.BasePage;
-import pageUIs.HomePageUI;
+import pageUIsUser.UserHomePageUI;
 
 public class HomePageObjectFactory extends BaseFactoryPage {
 	private WebDriver driver;

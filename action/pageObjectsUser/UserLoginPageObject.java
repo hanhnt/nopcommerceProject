@@ -1,24 +1,18 @@
-package pageObjects;
+package pageObjectsUser;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.LoginPageUI;
+import pageUIsUser.UserLoginPageUI;
 
-public class LoginPageObject extends BasePage{
+public class UserLoginPageObject extends BasePage{
 	WebDriver driver;
 	
-	public LoginPageObject(WebDriver driver) {
+	public UserLoginPageObject(WebDriver driver) {
 		this.driver=driver;
 	}
 	
-	LoginPageUI loginPageUI = new LoginPageUI();
-	
-	public HomePageObject clickToLoginButton() {
-		waitForElementVisible(driver, loginPageUI.LOGIN_LINK);
-		clickToElement(driver, loginPageUI.LOGIN_LINK);
-		return new HomePageObject(driver);
-	}
+	UserLoginPageUI loginPageUI = new UserLoginPageUI();
 
 	public String getErrorMessageAtEmail() {
 		waitForElementVisible(driver, loginPageUI.ERROR_MESSAGE_AT_EMAIL);
@@ -35,6 +29,18 @@ public class LoginPageObject extends BasePage{
 		waitForElementVisible(driver, loginPageUI.PASSWORD_TEXTBOX);
 		sendkeyToElement(driver, loginPageUI.PASSWORD_TEXTBOX, passwordValue);
 		
+	}
+	
+	public UserHomePageObject clickToLoginButton() {
+		waitForElementVisible(driver, loginPageUI.LOGIN_LINK);
+		clickToElement(driver, loginPageUI.LOGIN_LINK);
+		return new UserHomePageObject(driver);
+	}
+	
+	public UserHomePageObject loginAsUser(String email, String password) {
+		inputToEmailTextbox(email);
+		inputToPasswordTextbox(password);
+		return clickToLoginButton();
 	}
 
 	public String getErrorMessageEmailNotExist() {

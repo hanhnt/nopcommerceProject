@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import commons.BaseFactoryPage;
 import commons.BasePage;
-import pageUIs.LoginPageUI;
+import pageUIsUser.UserLoginPageUI;
 
 public class LoginPageObjectFactory extends BaseFactoryPage{
 	WebDriver driver;
@@ -32,7 +32,7 @@ public class LoginPageObjectFactory extends BaseFactoryPage{
 	@FindBy(xpath= "//span[@id='Email-error']")
 	private WebElement lbErrorEmailNotExist;
 	
-	LoginPageUI loginPageUI = new LoginPageUI();
+	UserLoginPageUI loginPageUI = new UserLoginPageUI();
 	
 	public void clickToLoginButton() {
 		waitForElementClickable(driver, lnLogin);

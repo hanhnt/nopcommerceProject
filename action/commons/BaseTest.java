@@ -46,6 +46,8 @@ public class BaseTest {
 				new RuntimeException("Please select browser");
 			break;
 		}
+		driver.manage().window().maximize();
+		driver.get(GloalConstants.USER_LINK);
 		return driver;
 	}
 }

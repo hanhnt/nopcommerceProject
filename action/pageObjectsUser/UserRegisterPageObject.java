@@ -1,12 +1,12 @@
-package pageFactory;
+package pageObjectsUser;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIsUser.UserRegisterPageUI;
 
-public class RegisterPageObjectFactory extends BasePage{
-	public RegisterPageObjectFactory(WebDriver driver) {
+public class UserRegisterPageObject extends BasePage{
+	public UserRegisterPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -71,15 +71,25 @@ public class RegisterPageObjectFactory extends BasePage{
 		sendkeyToElement(driver, UserRegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, confirmPasswordValue);
 		
 	}
+	
+	public void registerAsUser(String firsName, String lastName, String email, String password) {
+		inputToFirstNameTextbox(firsName);
+		inputToLastNameTextbox(lastName);
+		inputToEmailTextbox(email);
+		inputToPasswordTextbox(password);
+		inputToConfirmPasswordTextbox(password);
+		clickToRegisterButton();
+	}
 
 	public String getSuccessMessage() {
 		waitForElementVisible(driver, UserRegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 		return getElementText(driver, UserRegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
 
-	public void clickToLogoutButton() {
+	public UserHomePageObject clickToLogoutButton() {
 		waitForElementVisible(driver, UserRegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, UserRegisterPageUI.LOGOUT_LINK);
+		return new UserHomePageObject(driver);
 		
 	}
 

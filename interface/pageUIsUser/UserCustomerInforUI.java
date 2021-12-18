@@ -1,5 +1,5 @@
-package pageUIs;
+package pageUIsUser;
 
-public class CustomerInforUI {
+public class UserCustomerInforUI {
 	public static final String MY_ACCOUNT_PAGE_TITLE="//div[@class='page-title']/h1";    
 }

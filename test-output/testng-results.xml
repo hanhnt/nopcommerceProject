@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-14T10:06:42Z" name="Nopcommerce" finished-at="2021-12-14T10:07:20Z" duration-ms="37506">
+  <suite started-at="2021-12-18T14:14:01Z" name="Nopcommerce" finished-at="2021-12-18T14:14:48Z" duration-ms="46360">
     <groups>
     </groups>
-    <test started-at="2021-12-14T10:06:42Z" name="Run on Chrome" finished-at="2021-12-14T10:07:20Z" duration-ms="37506">
-      <class name="com.nopcommerce.user.Page_Generator_Manager_Login">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:06:42Z" name="beforeClass" finished-at="2021-12-14T10:07:09Z" duration-ms="26855" status="PASS">
+    <test started-at="2021-12-18T14:14:01Z" name="Run on Chrome" finished-at="2021-12-18T14:14:48Z" duration-ms="46360">
+      <class name="com.nopcommerce.user.Page_Object_Switch_Roles">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:01Z" name="beforeClass" finished-at="2021-12-18T14:14:06Z" duration-ms="5111" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,35 +18,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Login_01_Empty_Data()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:09Z" name="Login_01_Empty_Data" finished-at="2021-12-14T10:07:10Z" duration-ms="786" status="PASS">
+        <test-method signature="Role_01_01_Register_User()[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:06Z" name="Role_01_01_Register_User" finished-at="2021-12-18T14:14:13Z" duration-ms="6424" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_01_Empty_Data -->
-        <test-method signature="Login_02_Invalid_Email()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:10Z" name="Login_02_Invalid_Email" finished-at="2021-12-14T10:07:12Z" duration-ms="1788" status="PASS">
+        </test-method> <!-- Role_01_01_Register_User -->
+        <test-method signature="Role_01_02_Login_User()[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:13Z" name="Role_01_02_Login_User" finished-at="2021-12-18T14:14:17Z" duration-ms="4015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_02_Invalid_Email -->
-        <test-method signature="Login_03_Email_Not_Exist()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:12Z" name="Login_03_Email_Not_Exist" finished-at="2021-12-14T10:07:13Z" duration-ms="1600" status="PASS">
+        </test-method> <!-- Role_01_02_Login_User -->
+        <test-method signature="Role_01_03_User_To_Admin()[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:17Z" name="Role_01_03_User_To_Admin" finished-at="2021-12-18T14:14:29Z" duration-ms="12410" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_03_Email_Not_Exist -->
-        <test-method signature="Login_04_Email_Exist_Null_Password()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:13Z" name="Login_04_Email_Exist_Null_Password" finished-at="2021-12-14T10:07:15Z" duration-ms="1379" status="PASS">
+        </test-method> <!-- Role_01_03_User_To_Admin -->
+        <test-method signature="Role_01_04_Admin_To_User()[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:29Z" name="Role_01_04_Admin_To_User" finished-at="2021-12-18T14:14:47Z" duration-ms="18160" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_04_Email_Exist_Null_Password -->
-        <test-method signature="Login_05_Email_Exist_Incorrect_Password()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:15Z" name="Login_05_Email_Exist_Incorrect_Password" finished-at="2021-12-14T10:07:17Z" duration-ms="2217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_05_Email_Exist_Incorrect_Password -->
-        <test-method signature="Login_06_Correct_Email_Password()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:17Z" name="Login_06_Correct_Email_Password" finished-at="2021-12-14T10:07:20Z" duration-ms="2632" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_06_Correct_Email_Password -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Page_Generator_Manager_Login@1ce24091]" started-at="2021-12-14T10:07:20Z" name="afterClass" finished-at="2021-12-14T10:07:20Z" duration-ms="211" status="PASS">
+        </test-method> <!-- Role_01_04_Admin_To_User -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Page_Object_Switch_Roles@fbd1f6]" started-at="2021-12-18T14:14:47Z" name="afterClass" finished-at="2021-12-18T14:14:48Z" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.user.Page_Generator_Manager_Login -->
+      </class> <!-- com.nopcommerce.user.Page_Object_Switch_Roles -->
     </test> <!-- Run on Chrome -->
   </suite> <!-- Nopcommerce -->
 </testng-results>

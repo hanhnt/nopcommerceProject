@@ -8,16 +8,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjectsUser.UserHomePageObject;
+import pageObjectsUser.UserRegisterPageObject;
 
 public class Page_Object_Register extends BasePage {
 
 	WebDriver driver;
 	String projectPath= System.getProperty("user.dir");
 	String emailValue="user@gmail.com";
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	private String firstName, lastName, password;
 
 	@BeforeClass
@@ -25,8 +25,8 @@ public class Page_Object_Register extends BasePage {
 		System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
 		driver = new ChromeDriver();
 		
-		homePage= new HomePageObject(driver);
-		registerPage= new RegisterPageObject(driver);
+		homePage= new UserHomePageObject(driver);
+		registerPage= new UserRegisterPageObject(driver);
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");
 		firstName="Automation";
@@ -37,7 +37,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register_01-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_01-Step2: Click register link at home page");
 		registerPage.clickToRegisterButton();
@@ -53,7 +53,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register_02-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_02-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -70,7 +70,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_03_Register_Success() {
 		System.out.println("Register_03-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_03-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -89,7 +89,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_04_Exist_Email() {
 		System.out.println("Register_04-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_04-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -106,7 +106,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_05_Password_Less_Than_Six_Characters() {
 		System.out.println("Register_05-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_05-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -123,7 +123,7 @@ public class Page_Object_Register extends BasePage {
 	@Test
 	public void Register_06_Password_Not_Match_With_ConfirmPassword() {
 		System.out.println("Register_06-Step1: Click register link at home page");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		System.out.println("Register_06-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);

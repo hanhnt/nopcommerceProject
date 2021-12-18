@@ -4,18 +4,13 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.nopcommerce.user.Page_Generator_Manager_Login">
+      <class name="com.nopcommerce.user.Page_Object_Switch_Roles">
         <methods>
-          <include name="Login_01_Empty_Data"/>
-          <include name="beforeClass"/>
-          <include name="Login_03_Email_Not_Exist"/>
-          <include name="Login_04_Email_Exist_Null_Password"/>
-          <include name="Login_02_Invalid_Email"/>
-          <include name="Login_05_Email_Exist_Incorrect_Password"/>
-          <include name="Login_06_Correct_Email_Password"/>
           <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="Role_01_04_Admin_To_User"/>
         </methods>
-      </class> <!-- com.nopcommerce.user.Page_Generator_Manager_Login -->
+      </class> <!-- com.nopcommerce.user.Page_Object_Switch_Roles -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Nopcommerce] -->

@@ -13,16 +13,16 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjectsUser.UserHomePageObject;
+import pageObjectsUser.UserLoginPageObject;
+import pageObjectsUser.UserRegisterPageObject;
 
 public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	private WebDriver driver;
 	
-	private HomePageObject homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
 	private String emailValue= "user"+ getRandomNumber()+"@yopmail.com";;
 	private String passwordValue="12345678";
 	private String emailExist="user"+ getRandomNumber()+"@gmail.com";
@@ -34,14 +34,14 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 		driver=getBroswerDriver(browserName);
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().window().maximize();
-		homePage= new HomePageObject(driver);
-		loginPage= new LoginPageObject(driver);		
+		homePage= new UserHomePageObject(driver);
+		loginPage= new UserLoginPageObject(driver);		
 		
-		homePage.clickToRegisterLink();	
+		homePage.openRegisterPage();	
 		
 		System.out.println("Pre-condition-Step1: Click to register link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 		System.out.println("Pre-condition-Step2: Input to required field");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
@@ -57,7 +57,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	}
 	@Test
 	public void Login_01_Empty_Data() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		System.out.println("Login_01-Step1: Click into login button without data");
 		loginPage.clickToLoginButton();
 		
@@ -67,7 +67,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	}
 	@Test
 	public void Login_02_Invalid_Email() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		System.out.println("Login_02-Step1: Input invalid email");
 		loginPage.inputToEmailTextbox("hanh");
 		loginPage.inputToPasswordTextbox("12345678");
@@ -81,7 +81,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	
 	@Test
 	public void Login_03_Email_Not_Exist() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		
 		System.out.println("Login_03-Step1: Input email not exist");
 		loginPage.inputToEmailTextbox(emailValue);
@@ -99,7 +99,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	public void Login_04_Email_Exist_Null_Password() {
 		
 		
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		
 		System.out.println("Login_04-Step1: Input email exist and null password");
 		loginPage.inputToEmailTextbox(emailExist);
@@ -113,7 +113,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	
 	@Test
 	public void Login_05_Email_Exist_Incorrect_Password() {		
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		
 		System.out.println("Login_05-Step1: Input email exist and incorrect password");
 		loginPage.inputToEmailTextbox(emailExist);
@@ -129,7 +129,7 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	@Test
 	public void Login_06_Correct_Email_Password() {
 		
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		
 		System.out.println("Login_06-Step1: Input email exist and correct password");
 		loginPage.inputToEmailTextbox(emailExist);
