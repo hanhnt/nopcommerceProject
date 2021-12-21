@@ -10,7 +10,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
 import pageObjectsUser.UserAddressPageObject;
 import pageObjectsUser.UserCustomerInforPageObject;
 import pageObjectsUser.UserHomePageObject;
@@ -19,7 +18,7 @@ import pageObjectsUser.UserMyProductReviewPageObject;
 import pageObjectsUser.UserRegisterPageObject;
 import pageObjectsUser.UserRewardPointPageObject;
 
-public class Page_Object_Switch_Page extends BaseTest {
+public class Page_Object_Dynamic_Locator extends BaseTest {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	private UserHomePageObject homePage;
@@ -88,42 +87,6 @@ public class Page_Object_Switch_Page extends BaseTest {
 		addressPage = rewardPointPage.openAddressPage(driver);
 
 	}
-	
-	@Test
-	public void User5_Dynamic_Page () {
-		// Customer infor ->Address
-		addressPage = (UserAddressPageObject) customerInforPage.openPageAtMyAccountByPage(driver, "Addresses");
-
-		// Address -> my product review
-		myProductReviewPage = (UserMyProductReviewPageObject) addressPage.openPageAtMyAccountByPage(driver, "My product reviews");
-
-		// my product review -> Reward point
-		rewardPointPage = (UserRewardPointPageObject) myProductReviewPage.openPageAtMyAccountByPage(driver, "Reward points");
-
-		// Reward point-> Address
-		addressPage = (UserAddressPageObject) myProductReviewPage.openPageAtMyAccountByPage(driver, "Addresses");
-
-	}
-	
-	@Test
-	public void User6_Dynamic_Page (){
-		// Customer infor ->Address
-		customerInforPage.openPageAtMyAccountPageByPage(driver, "Addresses");
-		addressPage= PageGeneratorManager.getUserAddressPage(driver);
-
-		// Address -> my product review
-		addressPage.openPageAtMyAccountPageByPage(driver, "My product reviews");
-		myProductReviewPage=PageGeneratorManager.getUserMyProductReviewPage(driver);
-
-		// my product review -> Reward point
-		myProductReviewPage.openPageAtMyAccountPageByPage(driver, "Reward points");
-		rewardPointPage=PageGeneratorManager.getUserRewardPointPage(driver);
-
-		// Reward point-> Address
-		myProductReviewPage.openPageAtMyAccountPageByPage(driver, "Addresses");
-		addressPage= PageGeneratorManager.getUserAddressPage(driver);
-	}
-
 
 	@AfterClass
 	public void afterClass() {

@@ -46,7 +46,8 @@ public class Page_Object_Switch_Roles extends BaseTest{
 	public void beforeClass(String browserName) {
 		driver=getBroswerDriver(browserName);
 		userHomePage= new UserHomePageObject(driver);
-		userLoginPage= new UserLoginPageObject(driver);		
+		userLoginPage= new UserLoginPageObject(driver);	
+		adminLoginPage= new AdminLoginPageObject(driver);
 			
 	}
 	
@@ -81,16 +82,15 @@ public class Page_Object_Switch_Roles extends BaseTest{
 		adminLoginPage=PageGeneratorManager.getAdminLoginPage(driver);
 		adminDashboardPage=adminLoginPage.loginAsAdmin(adminEmailValue, adminPasswordValue);
 		Assert.assertEquals(adminDashboardPage.getDashboardText(), "Dashboard");
-		adminLoginPage= adminDashboardPage.clickToLogoutLinkAtAdminPage(driver);		
+		adminLoginPage= adminDashboardPage.clickToLogoutLinkAtAdminPage(driver);
 	}
 		
 	@Test
 	public void Role_01_04_Admin_To_User() {		
-		//adminLoginPage.openPageUlr(driver, GloalConstants.ADMIN_LINK);
+		adminLoginPage.openPageUlr(driver, GloalConstants.ADMIN_LINK);
 		adminLoginPage=PageGeneratorManager.getAdminLoginPage(driver);
 		adminDashboardPage=adminLoginPage.loginAsAdmin(adminEmailValue, adminPasswordValue);
 		Assert.assertEquals(adminDashboardPage.getDashboardText(), "Dashboard");
-		sleepInSecond(10);
 		adminLoginPage= adminDashboardPage.clickToLogoutLinkAtAdminPage(driver);
 		
 		adminLoginPage.openPageUlr(driver, GloalConstants.USER_LINK);		
@@ -102,10 +102,6 @@ public class Page_Object_Switch_Roles extends BaseTest{
 		
 	}
 	
-//	public void Role3_Admin_To_User() {
-//		
-//	}
-	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
@@ -114,14 +110,5 @@ public class Page_Object_Switch_Roles extends BaseTest{
 	public int getRandomNumber() {
 		Random rand= new Random();
 		return rand.nextInt(99999);
-	}
-	
-	public void sleepInSecond(long time) {
-		try {
-			Thread.sleep(time * 1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }

@@ -17,7 +17,4 @@ public class UserCustomerInforPageObject extends BasePage {
 		waitForElementVisible(driver, UserCustomerInforUI.MY_ACCOUNT_PAGE_TITLE);
 		return getElementText(driver, UserCustomerInforUI.MY_ACCOUNT_PAGE_TITLE);
 	}
-	
-	
-
 }

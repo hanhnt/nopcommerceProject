@@ -2,19 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite parallel="false" name="Nopcommerce">
 
-   <test name="Run on Chrome">
+    <test name="Run on Chrome">
   <parameter name="browser" value="chrome"> </parameter>
     <classes>
-      <class name="com.nopcommerce.user.Page_Object_Switch_Roles"/>
+      <class name="com.nopcommerce.user.Page_Object_Switch_Page"/>
     </classes>
   </test> 
   
-  <!-- <test name="Run on Firefox">
+  <!--  <test name="Run on Firefox">
   <parameter name="browser" value="firefox"> </parameter>
     <classes>
-      <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser"/>
+      <class name="com.nopcommerce.user.Page_Object_Switch_Roles"/>
     </classes>
-  </test>  -->
+  </test>   -->
   
   <!--  <test name="Run on Headless Chrome">
   <parameter name="browser" value="h_chrome"> </parameter>
