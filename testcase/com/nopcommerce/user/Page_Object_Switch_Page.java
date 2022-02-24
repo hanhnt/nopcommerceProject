@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.GloalConstants;
 import commons.PageGeneratorManager;
 import pageObjectsUser.UserAddressPageObject;
 import pageObjectsUser.UserCustomerInforPageObject;
@@ -34,10 +35,10 @@ public class Page_Object_Switch_Page extends BaseTest {
 	private String passwordValue = "12345678";
 	private String firstName = "Automation", lastName = "FC";
 
-	@Parameters("browser")
+	@Parameters({"browser","appUrl"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBroswerDriver(browserName);
+	public void beforeClass(String browserName,String appUrl) {
+		driver=getBroswerDriver(browserName, appUrl);
 		homePage = new UserHomePageObject(driver);
 		loginPage = new UserLoginPageObject(driver);
 

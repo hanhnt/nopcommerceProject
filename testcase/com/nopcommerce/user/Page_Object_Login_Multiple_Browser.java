@@ -28,10 +28,10 @@ public class Page_Object_Login_Multiple_Browser extends BaseTest {
 	private String emailExist="user"+ getRandomNumber()+"@gmail.com";
 	private String firstName="Automation", lastName="FC" ;
 	
-	@Parameters("browser")
+	@Parameters({"browser","appUrl"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver=getBroswerDriver(browserName);
+	public void beforeClass(String browserName,String appUrl) {
+		driver=getBroswerDriver(browserName, appUrl);
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().window().maximize();
 		homePage= new UserHomePageObject(driver);

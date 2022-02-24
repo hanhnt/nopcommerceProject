@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.server.handler.ClearElement;
 
 import commons.BasePage;
-import commons.PageGeneratorManager;
 import pageUIsAdmin.AdminLoginPageUI;
 
 public class AdminLoginPageObject extends BasePage{
@@ -24,15 +23,15 @@ public class AdminLoginPageObject extends BasePage{
 		sendkeyToElement(driver, AdminLoginPageUI.ADMIN_PASSWORD_TEXTBOX, password);
 	}
 	
-	public AdminDashboardPageObject clickToLoginButton() {
+	public void clickToLoginButton() {
 		waitForElementClickable(driver, AdminLoginPageUI.ADMIN_LOGIN_BUTTON);
 		clickToElement(driver, AdminLoginPageUI.ADMIN_LOGIN_BUTTON);
-		return new PageGeneratorManager().getHomePageAdmin(driver);
 	}
 	
 	public AdminDashboardPageObject loginAsAdmin(String email, String password) {
 		inputToEmailTextbox(email);
 		inputToPasswordTextbox(password);
-		return clickToLoginButton();
+		clickToLoginButton();
+		return new PageGeneratorManager().getAdminDashboardPage(driver);
 	}
 }

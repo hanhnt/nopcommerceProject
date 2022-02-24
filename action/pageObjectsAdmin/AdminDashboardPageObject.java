@@ -14,4 +14,13 @@ public class AdminDashboardPageObject extends BasePage{
 		waitForElementVisible(driver, AdminDashboardPageUI.DASHBOARD_TEXT);
 		return getElementText(driver, AdminDashboardPageUI.DASHBOARD_TEXT);
 	}
+	public AdminProductSearchPageObject openSubMenuByName(String menu, String subMenu) {
+		waitForElementClickable(driver,AdminDashboardPageUI.MENU_BY_NAME, menu);
+		clickToElement(driver, AdminDashboardPageUI.MENU_BY_NAME,menu);
+		
+		waitForElementClickable(driver,AdminDashboardPageUI.SUBMENU_BY_NAME, subMenu);
+		clickToElement(driver, AdminDashboardPageUI.SUBMENU_BY_NAME,subMenu);
+		return new AdminProductSearchPageObject(driver);
+	}
+	
 }

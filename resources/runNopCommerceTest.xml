@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite parallel="false" name="Nopcommerce">
+<!-- <parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"></parameter> -->
 
     <test name="Run on Chrome">
   <parameter name="browser" value="chrome"> </parameter>
     <classes>
-      <class name="com.nopcommerce.user.Page_Object_Switch_Page"/>
+      <class name="com.jquery.datatable.DataTable"/>
     </classes>
   </test> 
   

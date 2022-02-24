@@ -9,7 +9,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public class BaseTestDataTable {
 
 	WebDriver driver;
 	

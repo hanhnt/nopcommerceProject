@@ -41,14 +41,14 @@ public class Page_Object_Switch_Roles extends BaseTest{
 	private String adminPasswordValue="admin";
 	private String firstName="Automation", lastName="FC" ;
 	
-	@Parameters("browser")
+	@Parameters({"browser","appUrl"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver=getBroswerDriver(browserName);
+	public void beforeClass(String browserName,String appUrl) {
+		driver=getBroswerDriver(browserName, appUrl);
 		userHomePage= new UserHomePageObject(driver);
 		userLoginPage= new UserLoginPageObject(driver);	
 		adminLoginPage= new AdminLoginPageObject(driver);
-			
+		driver.get(GloalConstants.USER_LINK);	
 	}
 	
 	@Test

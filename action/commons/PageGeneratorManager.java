@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageObjectsAdmin.AdminDashboardPageObject;
 import pageObjectsAdmin.AdminLoginPageObject;
+import pageObjectsJQuery.HomePageObject;
 import pageObjectsUser.UserAddressPageObject;
 import pageObjectsUser.UserHomePageObject;
 import pageObjectsUser.UserLoginPageObject;
@@ -48,4 +49,9 @@ public class PageGeneratorManager {
 	public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver) {
 		return new AdminDashboardPageObject(driver);
 	}
+	
+	public static HomePageObject getHomePageJQuery(WebDriver driver) {
+		return new HomePageObject(driver);
+	}
+
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Admin- Nopcommerce">
+	<parameter name="url"
+		value="https://admin-demo.nopcommerce.com/login"></parameter>
+
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome">
+		</parameter>
+		<classes>
+			<class name="com.nopcommerce.admin.Admin_Upload_File" />
+		</classes>
+	</test>
+
+	<!-- <test name="Run on Firefox"> <parameter name="browser" value="firefox"> 
+		</parameter> <classes> <class name="com.nopcommerce.user.Page_Object_Switch_Roles"/> 
+		</classes> </test> -->
+
+	<!-- <test name="Run on Headless Chrome"> <parameter name="browser" value="h_chrome"> 
+		</parameter> <classes> <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser"/> 
+		</classes> </test> <test name="Run on Headless Firefox"> <parameter name="browser" 
+		value="h_firefox"> </parameter> <classes> <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser"/> 
+		</classes> </test> -->
+
+	<!-- <test name="Run on Safari"> <parameter name="browser" value="safari"> 
+		</parameter> <classes> <class name="com.nopcommerce.user.Page_Object_Login_Multiple_Browser"/> 
+		</classes> </test> -->
+</suite> 

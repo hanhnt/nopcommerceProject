@@ -11,6 +11,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.GloalConstants;
 import commons.PageGeneratorManager;
 import pageObjectsUser.UserHomePageObject;
 import pageObjectsUser.UserLoginPageObject;
@@ -27,12 +28,13 @@ public class Page_Generator_Manager_Login extends BaseTest{
 	private String emailExist="user@gmail.com";
 	private String firstName="Automation", lastName="FC" ;
 	
-	@Parameters("browser")
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver=getBroswerDriver(browserName);
+	public void beforeClass(String browserName,String appUrl) {
+		driver=getBroswerDriver(browserName, appUrl);
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");
+		
 		homePage = PageGeneratorManager.getUserHomePage(driver);		
 		System.out.println("Register_03-Step1: Click register link at home page");
 		registerPage=homePage.openRegisterPage();	

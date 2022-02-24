@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.GloalConstants;
 import pageObjectsUser.UserAddressPageObject;
 import pageObjectsUser.UserCustomerInforPageObject;
 import pageObjectsUser.UserHomePageObject;
@@ -33,12 +34,13 @@ public class Page_Object_Dynamic_Locator extends BaseTest {
 	private String passwordValue = "12345678";
 	private String firstName = "Automation", lastName = "FC";
 
-	@Parameters("browser")
+	@Parameters({"browser","appUrl"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBroswerDriver(browserName);
+	public void beforeClass(String browserName,String appUrl) {
+		driver=getBroswerDriver(browserName, appUrl);
 		homePage = new UserHomePageObject(driver);
 		loginPage = new UserLoginPageObject(driver);
+		driver.get(GloalConstants.USER_LINK);
 
 	}
 	@Test
