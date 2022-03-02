@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<appender name="console" class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
@@ -8,37 +9,37 @@
 		</layout>
 	</appender>
 
-	<appender name="logfile" class="org.apache.log4j.FileAppender">
-		<param name="File" value="./logs/NopCommerce.txt" />
+	<appender name="logfile" class="org.apache.log4j.FileAppender">  <!-- chi luu lai lan chay gan nhat tuc la luu lai lan chay cuoi cung nhung lan truoc se xoa het du lieu-->
+		<param name="File" value="./monitorLogs/NopCommerce.txt" />
 		<param name="Append" value="false" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
 		</layout>
 	</appender>
 
-	<appender name="file" class="org.apache.log4j.RollingFileAppender">
-		<param name="file" value="./logs/NopCommerce.log" />
+	<appender name="file" class="org.apache.log4j.RollingFileAppender"> <!-- cho phep luu lai tat ca nhung lan chay -->
+		<param name="file" value="./monitorLogs/NopCommerce.log" />
 		<param name="append" value="true" />
-		<param name="maxFileSize" value="10MB" />
+		<param name="maxFileSize" value="10MB" /> <!-- size lon nhat cua file log, co the tuy chinh -->
 		<param name="maxBackupIndex" value="10" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
 		</layout>
 	</appender>
 
-	<appender name="testng" class="commons.TestNGAppender">
+	<appender name="reportng" class="commons.TestNGAppender"> <!-- add log vao cho report, co 2 loai report la testNG va reportNG, cai dang dung la reportNG-->
 		<param name="Threshold" value="INFO" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
 		</layout>
 	</appender>
 
-	<category name="com.nopcommerce.login">
+	<category name="com.nopcommerce.user">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
 		<appender-ref ref="file" />
-		<appender-ref ref="testng" />
+		<appender-ref ref="reportng" />
 	</category>
 
 	<category name="com.bankguru.payment">
@@ -46,7 +47,7 @@
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
 		<appender-ref ref="file" />
-		<appender-ref ref="testng" />
+		<appender-ref ref="reportng" />
 	</category>
 
 	<root>

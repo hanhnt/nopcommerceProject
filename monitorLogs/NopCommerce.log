@@ -1,0 +1,139 @@
+[INFO ] [2022-02-28 22:37:37,560] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-02-28 22:37:46,995] Pre-condition Step2: Open homePage
+[INFO ] [2022-02-28 22:37:47,084] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-02-28 22:37:47,838] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-02-28 22:37:48,496] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-02-28 22:37:48,628] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-02-28 22:37:48,721]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-28 22:37:48,740] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-02-28 22:37:49,291] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-02-28 22:37:49,651] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-02-28 22:37:49,748] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-02-28 22:38:19,911] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-02-28 22:38:20,558] Login_03_Email_Not_Exist-Step2: Input email not exist user26461@gmail.com
+[INFO ] [2022-02-28 22:38:20,720] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-02-28 22:38:20,858] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-02-28 22:38:21,426]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-28 22:38:21,430] Post conditon: Close browser
+[INFO ] [2022-03-02 21:37:41,761] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 21:37:50,376] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 21:37:50,419] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 21:37:51,390] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 21:37:52,157] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 21:37:52,330] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 21:37:52,456]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 21:37:52,490] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 21:37:53,059] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 21:37:53,494] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 21:37:53,612] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 21:38:23,752] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 21:38:24,378] Login_03_Email_Not_Exist-Step2: Input email not exist user93215@gmail.com
+[INFO ] [2022-03-02 21:38:24,627] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 21:38:24,792] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 21:38:25,339]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 21:38:25,341] Post conditon: Close browser
+[INFO ] [2022-03-02 21:55:16,615]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 21:55:49,091]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 21:55:49,093] Post conditon: Close browser
+[INFO ] [2022-03-02 22:01:08,719] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:01:15,434] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:01:15,461] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:01:16,158] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:01:16,781] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:01:16,879] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:01:16,943]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:01:16,961] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:01:17,471] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:01:17,839] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:01:17,978] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:01:48,207] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:01:48,755] Login_03_Email_Not_Exist-Step2: Input email not exist user98982@gmail.com
+[INFO ] [2022-03-02 22:01:48,909] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:01:49,062] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:01:49,644]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:01:49,646] Post conditon: Close browser
+[INFO ] [2022-03-02 22:04:02,851] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:04:09,809] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:04:09,901] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:04:10,695] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:04:11,343] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:04:11,446] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:04:11,527]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:04:11,556] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:04:12,121] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:04:12,499] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:04:12,622] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:04:42,802] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:04:43,423] Login_03_Email_Not_Exist-Step2: Input email not exist user71389@gmail.com
+[INFO ] [2022-03-02 22:04:43,800] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:04:44,083] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:04:44,696]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:04:44,698] Post conditon: Close browser
+[INFO ] [2022-03-02 22:31:38,345] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:31:45,124] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:31:45,135] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:31:45,934] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:31:46,617] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:31:46,733] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:31:46,813]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:31:46,826] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:31:47,355] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:31:47,775] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:31:47,879] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:32:17,975] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:32:18,500] Login_03_Email_Not_Exist-Step2: Input email not exist user92717@gmail.com
+[INFO ] [2022-03-02 22:32:18,677] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:32:18,860] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:32:19,452]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:32:19,454] Post conditon: Close browser
+[INFO ] [2022-03-02 22:33:34,007] Pre-condition Step1: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:33:34,007] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:33:39,487] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:33:39,496] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:33:40,263] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:33:40,946] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:33:41,092] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:33:41,182]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:33:41,192] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:33:41,815] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:33:42,339] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:33:42,458] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:33:48,759] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:33:48,771] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:33:49,471] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:33:50,112] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:33:50,438] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:33:50,504]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:33:50,511] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:33:50,998] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:33:51,206] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:33:51,491] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:34:12,665] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:34:13,161] Login_03_Email_Not_Exist-Step2: Input email not exist user63823@gmail.com
+[INFO ] [2022-03-02 22:34:13,337] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:34:13,490] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:34:14,039]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:34:14,041] Post conditon: Close browser
+[INFO ] [2022-03-02 22:34:21,672] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:34:22,192] Login_03_Email_Not_Exist-Step2: Input email not exist user17211@gmail.com
+[INFO ] [2022-03-02 22:34:22,291] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:34:22,379] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:34:22,958]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:34:22,960] Post conditon: Close browser
+[INFO ] [2022-03-02 22:55:38,335] Pre-condition Step1: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/' 
+[INFO ] [2022-03-02 22:55:44,510] Pre-condition Step2: Open homePage
+[INFO ] [2022-03-02 22:55:44,528] Pre-condition Step3: Click register link at home pagee
+[INFO ] [2022-03-02 22:55:45,278] Login_01_Empty_Data-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:55:45,898] Login_01_Empty_Data-Step2: Don't input anything and click into Login button
+[INFO ] [2022-03-02 22:55:46,014] Login_01_Empty_Data-Step3: Showing the error message at email textbox
+[INFO ] [2022-03-02 22:55:46,107]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-02 22:55:46,120] Login_02_Invalid_Email-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:55:46,715] Login_02_Invalid_Email-Step2: Input invalid email and valid password
+[INFO ] [2022-03-02 22:55:47,183] Login_02_Invalid_Email-Step3: Click to login button
+[INFO ] [2022-03-02 22:55:47,292] Login_02_Invalid_Email-Step4: Check showing the error message
+[INFO ] [2022-03-02 22:56:17,380] Login_03_Email_Not_Exist-Step1: Open homePage Login
+[INFO ] [2022-03-02 22:56:17,881] Login_03_Email_Not_Exist-Step2: Input email not exist user22548@gmail.com
+[INFO ] [2022-03-02 22:56:18,043] Login_03_Email_Not_Exist-Step3: Input password 12345678
+[INFO ] [2022-03-02 22:56:18,182] Login_03_Email_Not_Exist-Step3: Click to login button
+[INFO ] [2022-03-02 22:56:18,736]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 22:56:18,738] Post conditon: Close browser

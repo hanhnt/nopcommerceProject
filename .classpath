@@ -26,5 +26,16 @@
 	<classpathentry kind="lib" path="libWebDriverManager/webdrivermanager-4.2.0.jar"/>
 	<classpathentry kind="lib" path="libLogging/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libLogging/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lbReportNG/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="lbReportNG/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="lbReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="lbReportNG/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListener/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
