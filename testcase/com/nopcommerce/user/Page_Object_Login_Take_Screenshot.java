@@ -1,12 +1,7 @@
 package com.nopcommerce.user;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Random;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -20,9 +15,9 @@ import pageObjectsUser.UserHomePageObject;
 import pageObjectsUser.UserLoginPageObjectVerify;
 import pageObjectsUser.UserRegisterPageObject;
 
-public class Page_Object_Login_Log_Report extends BaseTest{
+public class Page_Object_Login_Take_Screenshot extends BaseTest{
 	WebDriver driver;
-	String projectPath= System.getProperty("user.dir")+"/screenshot/";
+	String projectPath= System.getProperty("user.dir");
 	private UserHomePageObject homePage;
 	private UserLoginPageObjectVerify loginPage;
 	private UserRegisterPageObject registerPage;
@@ -55,7 +50,6 @@ public class Page_Object_Login_Log_Report extends BaseTest{
 		log.info("Login_01_Empty_Data-Step3: Showing the error message at email textbox");
 		verifyTrue(loginPage.isErrorMessageEmailDisplay());
 		
-		
 	}
 	@Test
 	public void Login_02_Invalid_Email() {
@@ -72,7 +66,6 @@ public class Page_Object_Login_Log_Report extends BaseTest{
 		log.info("Login_02_Invalid_Email-Step4: Check showing the error message");
 		verifyEquals(loginPage.getErrorMessageAtEmail(), "Wrong email");
 		
-		
 	}
 	
 	@Test
@@ -88,9 +81,8 @@ public class Page_Object_Login_Log_Report extends BaseTest{
 		log.info("Login_03_Email_Not_Exist-Step3: Click to login button");
 		loginPage.clickToLoginButton();
 		
-		log.info("Login_03_Email_Not_Exist-Step4: Check showing the error message");
-		verifyEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");	
-		
+		System.out.println("Login_03_Email_Not_Exist-Step4: Check showing the error message");
+		verifyEquals(loginPage.getErrorMessageEmailNotExist(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");		
 	}
 	
 	
@@ -104,6 +96,4 @@ public class Page_Object_Login_Log_Report extends BaseTest{
 		Random rand= new Random();
 		return rand.nextInt(99999);
 	}
-	
-	
 }

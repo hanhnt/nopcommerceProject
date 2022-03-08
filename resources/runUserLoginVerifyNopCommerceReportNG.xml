@@ -6,6 +6,7 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 		<listener class-name="reportConfig.ExtentReportListenerV2" />
+		<listener class-name="reportConfig.ReportNGListener" />
 	</listeners>
 	<parameter name="url"
 		value="https://demo.nopcommerce.com/"></parameter>

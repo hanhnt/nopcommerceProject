@@ -1,5 +1,7 @@
 package commons;
 
+import java.io.File;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -125,4 +128,34 @@ public class BaseTest {
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
 	}
+	public WebDriver getWebDriver() {
+		return this.driver;
+	}
+	
+
+@BeforeTest
+	public void deleteAllFilesInReportNGScreenshot() {
+		log.info("---------- START delete file in folder ----------");
+		deleteAllFileInFolder();
+		log.info("---------- END delete file in folder ----------");
+	}
+
+	public void deleteAllFileInFolder() {
+		try {
+			String workingDir = System.getProperty("user.dir");
+			String pathFolderDownload = workingDir + "/ReportNGScreenshots";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
+	}
+
+
 }
